@@ -3,3 +3,78 @@
   margin: 0;
   padding: 0;
 }
+
+body{
+  background-color: grey;
+}
+
+
+#container{
+  background-color: white;
+  border: 1px solid black;
+  display: grid;
+  width: 30%;
+  margin-top: 5%;
+  margin-left: 35%;
+  margin-right: 35%;
+  justify-content: center;
+  grid-template-columns: 100px 100px 100px 100px;
+  grid-template-rows: repeat(7, 70px);
+  grid-gap:10px;
+  padding-bottom: 20px;
+}
+
+
+.gridItem-input{
+  grid-column: 1 / 5;
+  grid-row: span 2;
+  border:2px solid grey;
+  margin-top: 20px;
+  padding-top: 30px;
+}
+
+
+.gridItem-operator:nth-of-type(5){
+  grid-column: 4 / 5;
+}
+
+
+.gridItem-number:nth-of-type(8){
+  grid-column: 1 / 2;
+}
+
+
+.gridItem-operator:nth-of-type(7){
+  grid-column: 4 / 5;
+}
+
+
+.gridItem-operator:nth-of-type(6){
+  grid-column: 4 / 5;
+}
+
+
+.gridItem-number:nth-of-type(9),
+.gridItem-number:nth-of-type(8),
+.gridItem-number:nth-of-type(10){
+  grid-row: 4 / 5;
+}
+
+
+.gridItem-number:nth-of-type(11),
+.gridItem-number:nth-of-type(12),
+.gridItem-number:nth-of-type(13){
+  grid-row: 5 / 6;
+}
+
+
+.gridItem-number:nth-of-type(14),
+.gridItem-number:nth-of-type(15),
+.gridItem-number:nth-of-type(16){
+  grid-row: 6 / 7;
+}
+
+
+.gridItem-equals{
+  grid-column: 3 / 5;
+}

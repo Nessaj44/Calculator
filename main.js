@@ -37,3 +37,9 @@ function allClear() {
   operation = '';
   operatorValue = '';
 }
+
+
+//Delete one by one
+function deleteByOne() {
+  inputField.textContent = inputField.textContent.slice(0, -1);
+}

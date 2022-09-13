@@ -30,7 +30,6 @@ body{
   grid-row: span 2;
   border:2px solid grey;
   margin-top: 20px;
-  padding-top: 30px;
 }
 
 
@@ -77,4 +76,10 @@ body{
 
 .gridItem-equals{
   grid-column: 3 / 5;
+}
+
+
+#previousInput{
+  padding-bottom: 30px;
+  opacity: .7;
 }

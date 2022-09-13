@@ -28,3 +28,12 @@ numberButtons.forEach(function(btn) {
 });
 
 
+//All clear button
+function allClear() {
+  inputField.textContent = '';
+  resultField.textContent = 0;
+  a = '';
+  b = '';
+  operation = '';
+  operatorValue = '';
+}

@@ -61,3 +61,17 @@ operatorButtons.forEach(function(btn) {
     operation = this.value;
   });
 });
+
+
+function operate(a, b, operation) {
+  switch(operation) {
+    case '+':
+      return +a + +b;
+    case '-':
+      return +a - +b;
+    case '*':
+      return +a * +b;
+    case '/':
+      return +a / +b;
+  }
+}

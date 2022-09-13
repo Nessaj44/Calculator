@@ -75,3 +75,14 @@ function operate(a, b, operation) {
       return +a / +b;
   }
 }
+
+
+//equal button
+function equals() {
+  if(inputField.textContent.includes('=')) {
+    return;
+  } else {
+    c = operate(a, b, operation);
+    resultField.textContent = c;
+  }
+}

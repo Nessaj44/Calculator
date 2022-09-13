@@ -43,3 +43,21 @@ function allClear() {
 function deleteByOne() {
   inputField.textContent = inputField.textContent.slice(0, -1);
 }
+
+
+//operator buttons
+operatorButtons.forEach(function(btn) {
+  btn.addEventListener('click', function() {
+    if(inputField.textContent === '') {
+      return;
+    } else if(a !== '' && b !== '') {
+      c = operate(a, b, operation);
+      inputField.textContent += this.value;
+      a = c;
+      b = '';
+    } else {
+      inputField.textContent += this.value;
+    }
+    operation = this.value;
+  });
+});

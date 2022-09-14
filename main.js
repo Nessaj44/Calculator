@@ -116,3 +116,15 @@ function decimal() {
     inputField.textContent += '.';
   }
 }
+
+
+//percent
+function percent() {
+  if (a === '') {
+    a = a / 100;
+    resultField.textContent = a;
+  } else if (operation !== '') {
+    b = b / 100;
+    resultField.textContent = b;
+  }
+}

@@ -84,7 +84,12 @@ function operate(a, b, operation) {
 
 //equal button
 function equals() {
-  if(inputField.textContent.includes('=')) {
+  if(
+    (inputField.textContent.includes('=')) ||
+    (a === '') ||
+    (b === '') ||
+    (operation === '')
+    ) {
     return;
   } else {
     c = operate(a, b, operation);

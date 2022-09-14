@@ -36,6 +36,13 @@ function allClear() {
 
 //Delete one by one
 function deleteByOne() {
+  if (b !== '') {
+    b = b.slice(0, -1);
+  } else if (operation !== '') {
+    operation = operation.slice(0, -1);
+  } else if (a !== '') {
+    a = a.slice(0, -1);
+  }
   inputField.textContent = inputField.textContent.slice(0, -1);
 }
 

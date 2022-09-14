@@ -103,3 +103,16 @@ function equals() {
     resultField.textContent = c;
   }
 }
+
+
+//decimal 
+function decimal() {
+  if(!a.includes('.') && !operation) {
+    a += '.';
+    inputField.textContent += '.';
+    console.log(a)
+  } else if(!b.includes('.')) {
+    b += '.'
+    inputField.textContent += '.';
+  }
+}

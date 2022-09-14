@@ -48,7 +48,13 @@ function deleteByOne() {
 //operator buttons
 operatorButtons.forEach(function(btn) {
   btn.addEventListener('click', function() {
-    if(inputField.textContent === '') {
+    if(
+      (inputField.textContent.endsWith('+')) ||
+      (inputField.textContent.endsWith('/')) ||
+      (inputField.textContent.endsWith('*')) ||
+      (inputField.textContent.endsWith('-')) ||
+      (inputField.textContent === '')
+      ) {
       return;
     } else if(a !== '' && b !== '') {
       c = operate(a, b, operation);
@@ -58,7 +64,7 @@ operatorButtons.forEach(function(btn) {
     } else {
       inputField.textContent += this.value;
     }
-    operation = this.value;
+    operation = this.value
   });
 });
 

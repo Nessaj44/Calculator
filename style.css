@@ -1,35 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
 *,*::after,*::before{
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: "Orbitron", sans-serif;
 }
 
 body{
-  background-color: grey;
+  background-color: rgb(100, 100, 100);
 }
 
 
 #container{
   background-color: white;
-  border: 1px solid black;
   display: grid;
-  width: 30%;
-  margin-top: 5%;
-  margin-left: 35%;
-  margin-right: 35%;
-  justify-content: center;
-  grid-template-columns: 100px 100px 100px 100px;
-  grid-template-rows: repeat(7, 70px);
-  grid-gap:10px;
-  padding-bottom: 20px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(7, 1fr);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 25%;
+  height: 60%;
 }
 
 
 .gridItem-input{
   grid-column: 1 / 5;
   grid-row: span 2;
-  border:2px solid grey;
-  margin-top: 20px;
 }
 
 
@@ -79,7 +77,44 @@ body{
 }
 
 
-#previousInput{
-  padding-bottom: 30px;
-  opacity: .7;
+#resultInput {
+  height: 40%;
+  font-size: 1.5rem;
+  box-shadow: 1px 1px 5px -2px black;
+  padding-left: 5%;
+  padding-top: 2%;
+}
+
+#currentInput {
+  height: 100%;
+  font-size: 1.5rem;
+  padding-left: 5%;
+  padding-top: 3%;
+}
+
+.gridItem-equals {
+  background-color: rgb(255, 180, 40);
+}
+.gridItem-equals:hover {
+  background-color: orange;
+}
+
+button {
+  border: 0;
+}
+
+.gridItem-clear,
+.gridItem-delete,
+.gridItem-operator {
+  background-color: rgb(199, 199, 199);
+}
+
+.gridItem-clear:hover,
+.gridItem-delete:hover,
+.gridItem-operator:hover {
+  background-color: rgb(149, 149, 149);
+}
+
+.gridItem-number:hover {
+  background-color: rgb(226, 226, 226);
 }

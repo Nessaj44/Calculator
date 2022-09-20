@@ -27,9 +27,9 @@ numberButtons.forEach(function(btn) {
 function allClear() {
   inputField.textContent = '';
   resultField.textContent = 0;
-  a = '';
+  a = ''; 
   b = '';
-  operation = '';
+  operation = ''; 
   c = '';
 }
 
@@ -98,7 +98,6 @@ function operate(a, b, operation) {
 //equal button
 function equals() {
   if(
-    (inputField.textContent.includes('=')) ||
     (a === '') ||
     (b === '') ||
     (operation === '')
@@ -114,16 +113,14 @@ function equals() {
   operation = '';
 }
 
-
 //decimal 
 function decimal() {
-  if(!a.includes('.') && !operation) {
+  if (!a.includes('.')) {
     a += '.';
     inputField.textContent += '.';
-    console.log(a)
-  } else if(!b.includes('.')) {
-    b += '.'
+  } else if (!b.includes('.') && operation) {
     inputField.textContent += '.';
+    b += '.'
   }
 }
 

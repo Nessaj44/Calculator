@@ -2,10 +2,10 @@ const numberButtons = document.querySelectorAll('.gridItem-number');
 const operatorButtons = document.querySelectorAll('.gridItem-operator');
 const inputField = document.querySelector('#currentInput');
 const resultField = document.querySelector('#resultInput');
-let a = '';
-let b = '';
+let a = ''; // first number
+let b = ''; // second number
 let operation = '';
-let c = '';
+let c = ''; // total
 
 
 //number buttons

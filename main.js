@@ -11,9 +11,9 @@ let c = '';
 //number buttons
 numberButtons.forEach(function(btn) {
   btn.addEventListener('click', function() {
-    if(inputField.textContent.includes('=')) {
+    if (c) {
       return;
-    } else if(operation === '') {
+    } else if (operation === '') {
       a += this.value;
     } else {
       b += this.value;
@@ -30,7 +30,7 @@ function allClear() {
   a = '';
   b = '';
   operation = '';
-  operatorValue = '';
+  c = '';
 }
 
 
@@ -54,8 +54,7 @@ operatorButtons.forEach(function(btn) {
       (inputField.textContent.endsWith('+')) ||
       (inputField.textContent.endsWith('/')) ||
       (inputField.textContent.endsWith('*')) ||
-      (inputField.textContent.endsWith('-')) ||
-      (inputField.textContent === '')
+      (inputField.textContent.endsWith('-'))
       ) {
       return;
     } else if(a !== '' && b !== '') {
@@ -63,6 +62,13 @@ operatorButtons.forEach(function(btn) {
       inputField.textContent += this.value;
       a = c;
       b = '';
+    } else if (c) {
+      a = c;
+      b = '';
+      c = '';
+      inputField.textContent += this.value;
+    } else if (inputField.textContent === '') {
+      return;
     } else {
       inputField.textContent += this.value;
     }
@@ -102,6 +108,10 @@ function equals() {
     c = operate(a, b, operation);
     resultField.textContent = c;
   }
+  inputField.textContent = '';
+  a = '';
+  b = '';
+  operation = '';
 }
 
 
